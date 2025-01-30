@@ -1,53 +1,84 @@
-import '@fontsource/jost/300.css';
-import '@fontsource/jost/400.css';
-import '@fontsource/jost/500.css';
-import '@fontsource/jost/700.css';
+import '@fontsource/league-spartan/300.css';
+import '@fontsource/league-spartan/400.css';
+import '@fontsource/league-spartan/500.css';
+import '@fontsource/league-spartan/700.css';
 
 import { createTheme } from '@mui/material/styles';
 
-export const themeSchema: any = {
+export const themeData: any = {
     palette: {
         primary: {
-            light: '#80c8f9',
-            main: '#1392E3',
-            dark: '#075c9d',
-            contrastText: '#fff',
+            light: '#67b2e3',
+            main: '#2691d7',
+            dark: '#1b6697',
+            contrastText: '#EEF4F6',
         },
         secondary: {
-            light: '#64f1ba',
-            main: '#02B87D',
-            dark: '#00815c',
-            contrastText: '#e9edef',
+            light: '#175781',
+            main: '#0f3a56',
+            dark: '#081d2b',
+            contrastText: '#364B63',
+        },
+        success: {
+            light: '#19B373',
+            main: '#138656',
+            dark: '#0D5939',
+            contrastText: '#E9FCF4',
+        },
+        error: {
+            light: '#F07575',
+            main: '#EE5D5D',
+            dark: '#EC4646',
+            contrastText: '#FCE8E8',
+        },
+        warning: {
+            light: '#F4E98B',
+            main: '#F1E574',
+            dark: '#F0E15C',
+            contrastText: '#453F07',
+        },
+        info: {
+            light: '#0081CC',
+            main: '#0071B3',
+            dark: '#006199',
+            contrastText: '#E6F6FF',
+        },
+        grey: {
+            light: '#5F7686',
+            main: '#556977',
+            dark: '#4A5C68',
+            contrastText: '#F0F3F4',
+        },
+        text: {
+            primary: '#555',
+            secondary: '#777',
+        },
+        background: {
+            default: '#fff',
         },
     },
     typography: {
-        fontFamily: 'Josefin Sans, sans-serif',
+        fontFamily: 'League Spartan, sans-serif',
         textTransform: 'none',
-        color: "#454545"
     },
     components: {
         MuiButton: {
             styleOverrides: {
                 root: {
                     textTransform: 'none',
-                    borderRadius: '50px',
-                    padding: "10px 20px",
+                    borderRadius: 0,
+                    padding: "10px 20px"
                 },
-                primary: {
-                    backgroundColor: '#1392E3',
-                    color: "#fff"
-                },
-                secondary: {
-                    backgroundColor: '#02B87D',
-                    color: "#fff"
-                },
-                gradient: {
-                    background: "linear-gradient(90deg, rgba(19,146,227,1) 0%, rgba(2,184,125,1) 100%)",
-                    color: "#fff"
-                }
             }
+        },
+        MuiTextField: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 0,
+                },
+            },
         },
     }
 }
 
-export const theme = createTheme(themeSchema);
+export const theme = createTheme(themeData)

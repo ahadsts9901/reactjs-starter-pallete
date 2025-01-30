@@ -1,8 +1,3 @@
-import '@fontsource/jost/300.css';
-import '@fontsource/jost/400.css';
-import '@fontsource/jost/500.css';
-import '@fontsource/jost/700.css';
-
 import "./App.css"
 import { BrowserRouter } from 'react-router-dom';
 import Routing from './Routing';
